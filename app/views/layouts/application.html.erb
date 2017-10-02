@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>BeausNBelles</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <div id="background"></div>
+
+    <%= render "shared/application_nav" %>
+
+    <%= yield %>
+
+    <footer class="nav fixed-bottom navbar-inverse bg-inverse">
+      <p>©2017 Barbershop Name All rights reserved</p>
+    </footer>
+    
+  </body>
+</html>

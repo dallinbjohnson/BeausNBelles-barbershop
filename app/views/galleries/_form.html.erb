@@ -1,0 +1,42 @@
+<%= form_for(image) do |f| %>
+  <% if image.errors.any? %>
+      <% image.errors.full_messages.each do |error| %>
+        <%= alert_generater error %>
+      <% end %>
+  <% end %>
+
+  <div class="form-group imageUpload">
+    <%= f.label :image, for: "#{imageId = SecureRandom.uuid}", class: "btn btn-large btn-primary" %>
+    <%= f.file_field :image, id: "#{imageId}", class: "hide", onclick: "reply_click(this.id)" %>
+    <img src="" id="<%= (imageId + "1") %>" alt="Preview Image" width="200px"/>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit 'Save Image', class: 'btn btn-primary btn-block' %>
+  </div>
+<% end %>
+
+<script type="text/javascript">
+  function reply_click(clicked_id) {
+    var imgFile = document.getElementById(clicked_id);
+    var prevNum = `${clicked_id}1`;
+
+    $(imgFile).change(function(){      
+      readImgUrlAndPreview(this);
+      function readImgUrlAndPreview(input){
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+          reader.onload = function (e) {                    
+            $(`#${prevNum}`).attr('src', e.target.result);
+          }
+        };
+        reader.readAsDataURL(input.files[0]);
+      } 
+    });
+  }
+</script>
