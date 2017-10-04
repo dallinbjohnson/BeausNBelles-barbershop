@@ -1,7 +1,14 @@
+<div id="galleryBackground"></div>
+
 <div id="carouselControls" class="carousel slide" data-ride="carousel" data-interval="3000">
   <div class="carousel-inner" role="listbox">
+      <ol class="carousel-indicators">
+        <% (@gallery_images.size).times do |count| %>
+          <li data-target="#carouselControls" data-slide-to="<%= count %>" class="<%= 'active' if count == 0 %>"></li>
+        <% end %>
+      </ol>
     <% @gallery_images.each do |image| %>
-      <div class="carousel-item <%= 'active' if image.id == 1 %>">
+      <div class="carousel-item <%= 'active' if image.id == @gallery_images.first.id %>">
         <div class="overlay"></div>
 	      <%= image_tag gallery_img(image.image), width: '100%', class: "d-block img-fluid slideImage", alt: "#{image.title}" %>
 	    </div>
@@ -20,7 +27,7 @@
 <div class="album text-muted">
   <div class="container">
 
-  	<p><%= link_to 'New Image', new_gallery_path, class: "btn btn-primary" %></p>
+  	<p><%= link_to 'New Image', new_gallery_path, class: "btn btn-primary" if logged_in?(:admin) %></p>
 
   	<div id="myModal" class="modal">
 		  <span class="close">&times;</span>
@@ -36,14 +43,16 @@
             <p class="card-text">
               <span><%= image.title %></span>
             </p>
-            <ol class="breadcrumb">
-            	<li class="breadcrumb-item">
-            		<%= link_to 'Edit', edit_gallery_path(image), class: "badge badge-info" %>
-            	</li>
-            	<li class="breadcrumb-item">
-            		<%= link_to 'Delete', image, method: :delete, data: { confirm: 'Are you sure?' }, class: "badge badge-danger" %>
-            	</li>
-            </ol>
+            <% if logged_in?(:admin) %>
+              <ol class="breadcrumb">
+              	<li class="breadcrumb-item">
+              		<%= link_to 'Edit', edit_gallery_path(image), class: "badge badge-info" %>
+              	</li>
+              	<li class="breadcrumb-item">
+              		<%= link_to 'Delete', image, method: :delete, data: { confirm: 'Are you sure?' }, class: "badge badge-danger" %>
+              	</li>
+              </ol>
+            <% end %>
           </div>
         </div>
       <% end %>

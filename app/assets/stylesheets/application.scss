@@ -17,7 +17,7 @@
  @import "bootstrap";
 
 body {
-	margin: 175px 0 50px 0;
+  margin: 132px 0 50px 0;
 	color: black;
 }
 .cover-container {
@@ -27,7 +27,7 @@ body {
   width: 50%;
   color: white;
 }
-#background {
+#homeBackground {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -43,6 +43,49 @@ body {
   background-blend-mode: lighten;
   -webkit-filter: opacity(90%);
   filter: opacity(90%);
+}
+#contactBackground {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: image-url('checkered-background.jpg') no-repeat, grey;
+  background-size: cover;
+  // background-color: grey;
+}
+#aboutBackground {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: image-url('barbershop-pole.jpg') no-repeat, grey;
+  background-size: cover;
+}
+#galleryBackground {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+  background-color: grey;
 }
 
 /*
@@ -63,7 +106,7 @@ nav hr {
 	border-color: white;
 }
 .nav-link {
-	font-size: 1.5em;
+	font-size: 1.3em;
   padding: .25rem 0;
   font-weight: bold;
   color: rgba(255,255,255,.5);
@@ -79,6 +122,14 @@ nav hr {
 .active {
   color: #fff;
   border-bottom-color: #fff;
+}
+.displayLogin a {
+  display: inline-block;
+}
+.login > .card {
+  width: 32rem;
+  margin: 0 auto;
+  float:none;
 }
 
 /*
@@ -112,6 +163,9 @@ footer p {
 .contact-card p,
 .about-card h1 {
 	text-align: center;
+}
+.about-card .card {
+  // background-color: grey;
 }
 .profile-img {
   border: 1px solid grey;
@@ -285,6 +339,8 @@ footer p {
 .form-container .card {
 	padding: 30px;
 	color: black;
+  width: 80%;
+  margin: 0 auto;
 }
 
 
@@ -333,12 +389,12 @@ footer p {
  * Edit and New pages End
  */
 
-@media (max-width: 70em) {
+@media (max-width: 62em) {
 	.textLogo {
 		display: none;
 	}
 	body {
-		margin: 210px 0 50px 0;
+		margin: 165px 0 50px 0;
 	}
 }
 @media (max-width: 50em) {

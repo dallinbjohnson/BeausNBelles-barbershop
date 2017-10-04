@@ -8,7 +8,7 @@
   <div class="form-group imageUpload">
     <%= f.label :image, for: "#{imageId = SecureRandom.uuid}", class: "btn btn-large btn-primary" %>
     <%= f.file_field :image, id: "#{imageId}", class: "hide", onclick: "reply_click(this.id)" %>
-    <img src="" id="<%= (imageId + "1") %>" alt="Preview Image" width="200px"/>
+    <img src="" id="<%= (imageId + "1") %>" alt="Preview Image" width="80%"/>
   </div>
 
   <div class="form-group">
