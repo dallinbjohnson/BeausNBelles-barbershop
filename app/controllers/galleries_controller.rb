@@ -1,6 +1,6 @@
 class GalleriesController < ApplicationController
 	before_action :set_gallery, only: [:edit, :update, :destroy]
-  access all: [:index], user: {except: [:destroy, :new, :update, :edit]}, admin: :all
+  # access all: [:index], user: {except: [:destroy, :new, :update, :edit]}, admin: :all
 
 	def index
 		@gallery_images = Gallery.order('created_at DESC')

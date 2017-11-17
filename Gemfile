@@ -62,3 +62,5 @@ gem 'devise', '~> 4.3'
 gem 'petergate', '~> 1.7', '>= 1.7.5'
 
 
+gem 'solidus'
+gem 'solidus_auth_devise'

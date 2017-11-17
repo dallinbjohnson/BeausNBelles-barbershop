@@ -6,23 +6,23 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create!(
-	email: "sample@gmail.com",
-	password: "asdfasdf",
-	password_confirmation: "asdfasdf",
-	roles: "user"
-)
+# User.create!(
+# 	email: "sample@gmail.com",
+# 	password: "asdfasdf",
+# 	password_confirmation: "asdfasdf",
+# 	roles: "user"
+# )
 
-puts "1 regular user created"
+# puts "1 regular user created"
 
-User.create!(
-	email: "Admin@gmail.com",
-	password: "asdfasdf",
-	password_confirmation: "asdfasdf",
-	roles: "admin"
-)
+# User.create!(
+# 	email: "Admin@gmail.com",
+# 	password: "asdfasdf",
+# 	password_confirmation: "asdfasdf",
+# 	roles: "admin"
+# )
 
-puts "1 Admin user created"
+# puts "1 Admin user created"
 
 9.times do |image|
 	Gallery.create!(
@@ -32,3 +32,6 @@ puts "1 Admin user created"
 end
 
 puts "9 Images created"
+
+Spree::Core::Engine.load_seed if defined?(Spree::Core)
+Spree::Auth::Engine.load_seed if defined?(Spree::Auth)
