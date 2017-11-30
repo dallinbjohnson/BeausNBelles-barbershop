@@ -14,17 +14,38 @@
  *= require_self
  */
 
- @import "bootstrap";
+@import "bootstrap";
+
+@font-face {
+  font-family: 'Acme';
+  src:font-url('Acme/Acme-Regular.ttf')
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src:font-url('Montserrat/Montserrat-Regular.ttf')
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,
+nav a {
+  font-family: 'Acme', sans-serif;
+}
 
 body {
-  margin: 132px 0 50px 0;
+  margin: 109px 0 50px 0;
 	color: black;
+  font-family: 'Montserrat', sans-serif;
 }
 .cover-container {
   text-align: center;
   padding-top: 130px;
   margin: auto;
-  width: 50%;
+  width: 55%;
   color: white;
 }
 #homeBackground {
@@ -55,7 +76,7 @@ body {
   z-index: -100;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: image-url('checkered-background.jpg') no-repeat, grey;
+  background: image-url('checkerboard-pattern.jpg') no-repeat, grey;
   background-size: cover;
   // background-color: grey;
 }
@@ -93,7 +114,7 @@ body {
  */
 
 .textLogo {
-	padding: 0 25%;
+	padding: 0 35%;
 }
 .scissorLogo {
 	border-radius: 2%;
@@ -106,7 +127,7 @@ nav hr {
 	border-color: white;
 }
 .nav-link {
-	font-size: 1.3em;
+	font-size: 1.5em;
   padding: .25rem 0;
   font-weight: bold;
   color: rgba(255,255,255,.5);
@@ -132,10 +153,40 @@ nav hr {
   float:none;
 }
 
+/* Brackets go out Start */
+// ul.brackets a:before, ul.brackets a:after {
+//     position: relative;
+//     opacity: 0;
+//     font-size: 35px;
+//     top: 0px;
+//     transition: all 0.3s;
+// }
+// ul.brackets a:before {
+//     content: '(';
+//     left: 0px;
+//     transform: translateX(10px);
+// }
+// ul.brackets a:after {
+//     content: ')';
+//     right: 0px;
+//     transform: translateX(-10px);
+// }
+// ul.brackets a:hover:before, ul.brackets a:hover:after {
+//     opacity: 1;
+//     transform: translateX(0px);
+// }
+/* Brackets go out End */
+
 /*
  * Navbar End
  */
 
+.cover-container h1 {
+  font-size: 3em;
+}
+.cover-container p {
+  font-size: 2em;
+}
 .bookingBtn {
 	border: solid black 1px
 }
@@ -149,12 +200,27 @@ footer p {
 }
 
 /*
+ * Appointment page start
+ */
+
+.thead-red {
+  background-color: #B32D29;
+}
+
+/*
+ * Appointment page end
+ */
+
+/*
  * Contact page & About page
  */
 
 .app-card-container .card {
-	padding: 30px;
+	padding: 20px;
 	color: black;
+}
+.row {
+  margin-bottom: 0;
 }
 .contact-card h1,
 .contact-card h2,
@@ -164,13 +230,26 @@ footer p {
 .about-card h1 {
 	text-align: center;
 }
+.contact-card p {
+  margin: 0;
+}
 .about-card .card {
   // background-color: grey;
+  // background-color: lightgrey;
+}
+.contact-card .card {
+  // background-color: rgba(128,128,128,.9);
+  // background-color: lightgrey;
 }
 .profile-img {
   border: 1px solid grey;
   border-radius: 5px;
   width: 100%;
+}
+.about-card ol {
+  // list-style-position: inside;
+  text-indent: -1em;
+  padding-left: 1em;
 }
 .contact-card a {
   color: #428bca;
@@ -185,7 +264,7 @@ footer p {
  */
 
 .slideImage {
-  height: 605px;
+  height: 595px;
   object-fit: cover;
 }
 // .carousel-control-prev, .carousel-control-next {

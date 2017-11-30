@@ -3,7 +3,7 @@
 <div class="app-card-container contact-card">
 	<div class="container">	
 		<div class="card">
-			<h1>Contact Us</h1>
+			<h1>Contact Me</h1>
 
 			<div><hr></div>
 
@@ -29,10 +29,21 @@
 
 					<hr>
 
-					<%= image_tag "open_close.jpg", width: "150px", style: "float: left; border-radius: 5px;" %>
-					<h3>Barbershop Hours</h3>
-					<h5>Monday - Friday</h5>
-					<p>9:00AM - 6:00PM</p>
+					<div class="row">
+						<div class="col-md-3">
+							<%= image_tag "open_close.jpg", width: "150px", style: "float: left; border-radius: 5px;" %>
+						</div>
+
+						<div class="col-md-9">
+							<h3>Barbershop Hours</h3>
+							<p>Monday: 5:00PM - 9:00PM</p>
+							<p>Tuesday: 9:00AM - 7:00PM</p>
+							<!-- <p>Wednesday: 9:00AM - 6:00PM</p> -->
+							<p>Thursday: 9:00AM - 7:00PM</p>
+							<p>Friday: 7:00AM - 10:00PM</p>
+							<p>Saturday: 7:00AM - 10:00PM</p>
+						</div>
+					</div>
 				</div>
 
 				<div class="col-md-6">
@@ -42,3 +53,32 @@
 		</div>
 	</div>
 </div>
+
+<div class="app-card-container about-card">
+	<div class="container">	
+		<div class="card">
+			<h1>About Me</h1>
+
+			<div><hr></div>
+
+			<div class="row">
+				<div class="col-md-6">
+					<%= image_tag "ProfileImage.jpg", alt: "Profile Image", class: 'profile-img' %>
+				</div>
+
+				<div class="col-md-6">
+					
+					<p>Welcome to The shop, <br> My name is Ben, or you can call me Benny the barber. I have a passion for barbering and cutting hair. It has been a good few years since I started and I have loved every second of it. My Barber business started in December of 2016, I have enjoyed every moment since and I have also enjoyed every customer that has walked through my door. I have established a comfortable one on one environment that I feel people love. With my circumstances my simple shop has allowed those that live around me to have a place to come and receive grooming in a more personable setting.</p> 
+
+					<ol>
+						<li>You will enjoy the services that are provided, if not? Money back guaranteed</li>
+						<li>You won’t miss out on a good conversation and won’t be ignored</li>
+						<li>You will be in a more personable setting that will allow our barber/client friendship to grow</li>
+					</ol>
+				</div>
+			</div>
+				<p>For those of you who are looking for a barber, grooming/ beauty to an extent, or someone to just talk to I would recommend giving me a shot. I am skilled in Men's haircuts and straight shaves. I have also retained knowledge in how to keep your scalp healthy. Most people in Utah don't know how to keep their scalp healthy in a desert climate. I have earned knowledge in style haircuts for men as well as beard trimming and grooming. I also know how to do short cuts on women such as pixie and bobs & trimming split ends etc. . Like I said if you didn't enjoy the quality of the service let me know and 100% money back guarantee.</p>
+		</div>
+	</div>
+</div>
+

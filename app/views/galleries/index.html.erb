@@ -27,7 +27,7 @@
 <div class="album text-muted">
   <div class="container">
 
-  	<p><%= link_to 'New Image', new_gallery_path, class: "btn btn-primary" if logged_in?(:admin) %></p>
+  	<p><%= link_to 'New Image', new_gallery_path, class: "btn btn-primary" if current_spree_user && current_spree_user.admin? %></p>
 
   	<div id="myModal" class="modal">
 		  <span class="close">&times;</span>
@@ -43,7 +43,7 @@
             <p class="card-text">
               <span><%= image.title %></span>
             </p>
-            <% if logged_in?(:admin) %>
+            <% if current_spree_user && current_spree_user.admin? %>
               <ol class="breadcrumb">
               	<li class="breadcrumb-item">
               		<%= link_to 'Edit', edit_gallery_path(image), class: "badge badge-info" %>

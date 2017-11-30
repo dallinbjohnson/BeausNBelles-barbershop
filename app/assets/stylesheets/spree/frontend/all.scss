@@ -1,0 +1,91 @@
+/*
+* This is a manifest file that includes stylesheets for spree_frontend
+ *= require normalize
+ *= require spree/frontend/screen
+*/
+
+// @import "bootstrap";
+
+@font-face {
+  font-family: 'Acme';
+  src:font-url('Acme/Acme-Regular.ttf')
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src:font-url('Montserrat/Montserrat-Regular.ttf')
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,
+header a {
+  font-family: 'Acme', sans-serif;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	max-width: 100%;
+	font-family: 'Montserrat', sans-serif;
+}
+body a {
+	color: black;
+}
+ul#products li .price {
+	color: black;
+}
+
+// * {
+// 	border: 1px solid red;
+// }
+.container {
+	margin: 20px;
+	width: 100%;
+}
+.container .twelve.columns.omega{
+	width: 70%;
+}
+header {
+	width: 100%;
+}
+.container .sixteen.columns {
+	width: 95%;
+}
+.container #wrapper .sixteen#content  {
+	margin: 0 10%;
+	width: 70%;
+}
+#wrapper {
+	max-width: 100%;
+}
+header a { // #home-link
+	font-size: 1.8em !important;
+}
+nav#top-nav-bar {
+	width: 69%
+}
+nav #main-nav-bar {
+	margin: 10px auto;
+}
+ul#products li {
+	width: 20%;
+}
+
+// #galleryBackground {
+//   position: fixed;
+//   top: 50%;
+//   left: 50%;
+//   min-width: 100%;
+//   min-height: 100%;
+//   width: auto;
+//   height: auto;
+//   z-index: -100;
+//   -webkit-transform: translateX(-50%) translateY(-50%);
+//   transform: translateX(-50%) translateY(-50%);
+//   background-size: cover;
+//   background-color: grey;
+// }
