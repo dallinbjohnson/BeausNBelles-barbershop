@@ -15,5 +15,6 @@
 //= require lib/typed
 //= require typed-implementation
 //= require turbolinks
+//= require gritter
 //= require_tree .
 //= require bootstrap-sprockets

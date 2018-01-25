@@ -2,7 +2,7 @@
 
 <div id="carouselControls" class="carousel slide" data-ride="carousel" data-interval="3000">
   <div class="carousel-inner" role="listbox">
-      <ol class="carousel-indicators">
+      <ol class="carousel-indicators carousel-indicators--round">
         <% (@gallery_images.size).times do |count| %>
           <li data-target="#carouselControls" data-slide-to="<%= count %>" class="<%= 'active' if count == 0 %>"></li>
         <% end %>

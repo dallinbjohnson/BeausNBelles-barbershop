@@ -12,4 +12,16 @@ module ApplicationHelper
 	def active? path
     "active" if current_page? path
   end
+
+  def alerts_helper
+    alert = (flash[:alert] || flash[:error] || flash[:notice])
+
+    if alert
+      alert_generater alert
+    end
+  end
+
+  def alert_generater msg
+    js add_gritter(msg, title: "Ben's Barbershop", sticky: false)
+  end
 end

@@ -15,6 +15,7 @@
  */
 
 @import "bootstrap";
+@import "gritter";
 
 @font-face {
   font-family: 'Acme';
@@ -270,6 +271,20 @@ footer p {
 // .carousel-control-prev, .carousel-control-next {
 //   background-color: rgba(0,0,0,.1);
 // }
+.carousel-indicators--round li {
+  border-radius: 10px;
+  margin: 1px 3px;
+  height: 15px;
+  max-width: 15px;
+  border: 1px solid #FFF;
+  background-color: transparent;
+}
+.carousel-indicators .active {
+  background-color: #fff;
+  height: 17px;
+  max-width: 17px;
+  margin: 0 3px;
+}
 .overlay {
   position: absolute;
   width: 100%;
