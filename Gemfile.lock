@@ -143,6 +143,7 @@ GEM
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
     jmespath (1.3.1)
+    johnson_copy_right (0.1.0)
     jquery-rails (4.3.1)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
@@ -385,6 +386,7 @@ DEPENDENCIES
   dotenv-rails (~> 2.2, >= 2.2.1)
   gritter (~> 1.2)
   jbuilder (~> 2.5)
+  johnson_copy_right (~> 0.1.0)
   jquery-rails
   listen (~> 3.0.5)
   mini_magick (~> 4.8)

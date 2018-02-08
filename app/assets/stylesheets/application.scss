@@ -116,11 +116,34 @@ body {
 
 .textLogo {
 	padding: 0 35%;
+  height: 90px;
 }
 .scissorLogo {
 	border-radius: 2%;
 	// Logo color for the red #d9534f
 }
+
+.scissorLogo.transform {
+  transform: rotate(90deg);
+  margin-left: 25px;
+  transition: transform 0.5s ease-in-out;
+}
+.textLogo.transform {
+  // display: none;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.5s ease-in-out;
+  transition: height 0.5s ease-in-out;
+}
+.navbar {
+  height: 187px;
+}
+.navbar.transform {
+  height: 90px;
+  -webkit-transition: height 0.5s;
+  transition: height 0.5s;
+}
+
 nav {
 	background-color: rgba(0, 0 ,0 , 0.5)
 }
@@ -372,7 +395,7 @@ footer p {
     text-align: center;
     color: #ccc;
     padding: 10px 0;
-    height: 150px;
+    // height: 150px;
 }
 
 /* Add Animation */

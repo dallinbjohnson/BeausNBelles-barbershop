@@ -24,4 +24,8 @@ module ApplicationHelper
   def alert_generater msg
     js add_gritter(msg, title: "Ben's Barbershop", sticky: false)
   end
+
+  def copyright_generator
+    JohnsonCopyRight::Renderer.copyright 'Ben Fellingham', 'All rights reserved'
+  end
 end

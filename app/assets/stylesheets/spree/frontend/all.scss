@@ -75,6 +75,14 @@ ul#products li {
 	width: 20%;
 }
 
+#product-images #main-image img {
+	object-fit: contain;
+	max-width: 340px;
+}
+ul#products li .product-image img {
+	min-height: 100px;
+}
+
 // #galleryBackground {
 //   position: fixed;
 //   top: 50%;

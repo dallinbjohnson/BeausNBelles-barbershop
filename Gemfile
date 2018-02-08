@@ -66,3 +66,5 @@ gem 'solidus'
 gem 'solidus_auth_devise'
 
 gem 'gritter', '~> 1.2'
+
+gem 'johnson_copy_right', '~> 0.1.0'
