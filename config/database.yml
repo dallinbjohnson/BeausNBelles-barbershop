@@ -23,7 +23,10 @@ default: &default
 
 development:
   <<: *default
-  database: BeausNBelles_development
+  adapter: postgresql
+  host: localhost
+  username: BensBarbershop
+  database: BensBarbershop_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -57,7 +60,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: BeausNBelles_test
+  database: BensBarbershop_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -80,6 +83,7 @@ test:
 #
 production:
   <<: *default
-  database: BeausNBelles_production
-  username: BeausNBelles
-  password: <%= ENV['BEAUSNBELLES_DATABASE_PASSWORD'] %>
+  database: BensBarbershop_production
+  username: BensBarbershop
+  password: <%= ENV['BENSBARBERSHOP_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
