@@ -230,6 +230,13 @@ footer p {
 .thead-red {
   background-color: #B32D29;
 }
+#accordion a {
+  color: #0275d8;
+}
+#accordion a:focus,
+#accordion a:hover {
+  color: #014c8c;
+}
 
 /*
  * Appointment page end
@@ -277,6 +284,10 @@ footer p {
 }
 .contact-card a {
   color: #428bca;
+}
+.contact-card a:focus,
+.contact-card a:hover {
+  color: #014c8c;
 }
 
 /*

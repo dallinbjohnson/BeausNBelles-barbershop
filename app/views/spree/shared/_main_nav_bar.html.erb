@@ -19,11 +19,11 @@
       <%= link_to "Contact", "/contact" %>
     </li>
     <li id="link-to-cart" data-hook>
-      <!-- <noscript> -->
+      <noscript>
         <%= link_to Spree.t(:cart), spree.cart_path %>
-      <!-- </noscript> -->
-      <!-- &nbsp; -->
+      </noscript>
+      &nbsp;
     </li>
   </ul>
-  <!-- <script>Spree.fetch_cart('<%#= j spree.cart_link_path %>')</script> -->
+  <script>Spree.fetch_cart('<%= j spree.cart_link_path %>')</script>
 </nav>
