@@ -65,7 +65,7 @@ gem 'petergate', '~> 1.7', '>= 1.7.5'
 gem 'solidus'
 gem 'solidus_auth_devise'
 gem 'deface', '~> 1.3'
-gem 'aws-sdk', '< 2.0'
+# gem 'aws-sdk', '< 2.0'
 
 gem 'gritter', '~> 1.2'
 

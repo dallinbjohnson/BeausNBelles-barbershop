@@ -86,4 +86,4 @@ production:
   database: BensBarbershop_production
   username: BensBarbershop
   password: <%= ENV['BENSBARBERSHOP_DATABASE_PASSWORD'] %>
-  url: <%= ENV['DATABASE_URL'] %>
+  # url: <%= ENV['DATABASE_URL'] %>
