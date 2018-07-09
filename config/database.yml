@@ -83,7 +83,9 @@ test:
 #
 production:
   <<: *default
-  database: BensBarbershop_production
-  username: BensBarbershop
-  password: <%= ENV['BENSBARBERSHOP_DATABASE_PASSWORD'] %>
+  database: <%= ENV['DATABASE'] || 'BensBarbershop_production' %>
+  username: <%= ENV['DATABASE_USERNAME'] || BensBarbershop %>
+  password: <%= ENV['BENSBARBERSHOP_DATABASE_PASSWORD'] || 'changeme' %>
+  host: <%= ENV['DATABASE_HOST'] || localhost %>
+  port: <%= ENV['DATABASE_PORT'] || 5432 %>
   # url: <%= ENV['DATABASE_URL'] %>

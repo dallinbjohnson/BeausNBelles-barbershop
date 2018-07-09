@@ -18,3 +18,14 @@
 
 /config/secrets.yml
 .env
+
+/public/assets
+/public/system
+/public/cache
+
+/pgdata
+/redisdata
+
+.DS_Store
+.DS_Store?
+
